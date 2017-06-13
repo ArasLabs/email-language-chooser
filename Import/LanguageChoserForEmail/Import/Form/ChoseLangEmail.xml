@@ -1,0 +1,70 @@
+﻿<AML>
+ <Item type="Form" id="ABDF2FD61C6D4504819ACC486A7D374E" action="add">
+  <height>100</height>
+  <name>ChoseLangEmail</name>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>50</width>
+  <Relationships>
+   <Item type="Body" id="2B05DC11984A4B4EB1C84BC58A198150" action="add">
+    <sort_order>128</sort_order>
+    <source_id keyed_name="ChoseLangEmail" type="Form">ABDF2FD61C6D4504819ACC486A7D374E</source_id>
+    <Relationships>
+     <Item type="Field" id="FF61D90A9F1949228D25FACDAE910867" action="add">
+      <bg_color>#FFFFFF</bg_color>
+      <border_width>0</border_width>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Send Email</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <name>button0</name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="2B05DC11984A4B4EB1C84BC58A198150" type="Body">2B05DC11984A4B4EB1C84BC58A198150</source_id>
+      <tab_stop>1</tab_stop>
+      <x>99</x>
+      <y>91</y>
+      <Relationships>
+       <Item type="Field Event" id="475A11EB9FD947768A71CD83586E5718" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="getLanguageForEmail" type="Method">
+         <Item type="Method" action="get" select="config_id">
+          <name>getLanguageForEmail</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="button0" type="Field">FF61D90A9F1949228D25FACDAE910867</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="1650C69A46F543EBA767E2D17FD0ADFA" action="add">
+      <bg_color>#FFFFFF</bg_color>
+      <border_width>0</border_width>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<input type="radio" name="email_language" value="English" checked />English<br />
+<input type="radio" name="email_language" value="Japanese" />Japanese<br />]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Choose Language</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <name>radioListLanguage</name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="2B05DC11984A4B4EB1C84BC58A198150" type="Body">2B05DC11984A4B4EB1C84BC58A198150</source_id>
+      <tab_stop>1</tab_stop>
+      <x>92</x>
+      <y>32</y>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="Action" id="F8238B998D754ABDBED808AB7E6B4853" action="add">
+  <item_query>___is_new___</item_query>
+  <location>client</location>
+  <method keyed_name="EmailPartDetails_Client" type="Method">
+   <Item type="Method" action="get" select="config_id">
+    <name>EmailPartDetails_Client</name>
+   </Item>
+  </method>
+  <name>Email Details to Creator</name>
+  <target>none</target>
+  <type>item</type>
+ </Item>
+</AML>

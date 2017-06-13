@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="Item Action" id="F36D5D2E1A9E4168A33847ED3D5C25D9" action="add">
+  <related_id keyed_name="Email Details to Creator" type="Action">
+   <Item type="Action" id="F8238B998D754ABDBED808AB7E6B4853" action="add">
+    <item_query>___is_new___</item_query>
+    <location>client</location>
+    <method keyed_name="EmailPartDetails_Client" type="Method">
+     <Item type="Method" action="get" select="config_id">
+      <name>EmailPartDetails_Client</name>
+     </Item>
+    </method>
+    <name>Email Details to Creator</name>
+    <target>none</target>
+    <type>item</type>
+   </Item>
+  </related_id>
+  <sort_order>1280</sort_order>
+  <source_id keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</source_id>
+ </Item>
+</AML>

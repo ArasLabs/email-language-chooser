@@ -1,0 +1,68 @@
+﻿<AML>
+ <Item type="Method" id="2D13A2DCAD604CB48829608AB515EDBB" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[Innovator inn = this.getInnovator();
+
+//Lanaguage from selctor passed to method
+string emailLang = this.getProperty("email_lang");
+Item myEmail = inn.newItem("Email Message","get");
+
+//Select proper Email based on language selected.  Default to english
+if (emailLang=="Japanese")
+{
+	myEmail.setProperty("name","EmailPartDetails - Japanese");
+}
+else
+{
+	myEmail.setProperty("name","EmailPartDetails - English");
+}
+myEmail=myEmail.apply();
+
+//Get Details for user who will send email
+//This is defined in teh EMail Message Item
+Item fromUser = inn.newItem ("user","get");
+fromUser.setAttribute("select","email,keyed_name");
+fromUser.setID(myEmail.getProperty("from_user"));
+fromUser=fromUser.apply();
+
+//Part ID is passed from action
+Item myPart = inn.newItem("Part","get");
+myPart.setID(this.getProperty("id"));
+myPart = myPart.apply();
+
+//Get Part Details for Email
+string pNum = myPart.getProperty("item_number","");
+string pClass = myPart.getProperty("classification","");
+string pDesc = myPart.getProperty("name","");
+
+//Email is beign sent to creator
+string pCreatorID = myPart.getProperty("created_by_id");
+Item creator=inn.newItem("user","get");
+creator.setAttribute("select","email");
+creator.setID(pCreatorID);
+creator=creator.apply();
+
+string to_user = creator.getProperty("email","");
+string from_user = fromUser.getProperty("email");
+string from_userN = fromUser.getProperty("keyed_name");
+
+//Body is taken from EMail Message Item
+//String.Format() is used to popualte values into message
+string html_body = myEmail.getProperty("body_html");
+html_body = String.Format(html_body, pNum,pClass,pDesc);
+string emailSubject = myEmail.getProperty("subject");
+
+//Send Email
+System.Net.Mail.MailAddress SendFrom = new System.Net.Mail.MailAddress(from_user,from_userN);
+System.Net.Mail.MailAddress SendTo = new System.Net.Mail.MailAddress(to_user);
+System.Net.Mail.MailMessage MyMessage = new System.Net.Mail.MailMessage(SendFrom, SendTo);
+MyMessage.Subject = emailSubject;
+MyMessage.IsBodyHtml = true;    
+MyMessage.Body = html_body;
+CCO.Email.SetupSmtpMailServerAndSend(MyMessage);           	 
+
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>EmailPartDetails</name>
+ </Item>
+</AML>

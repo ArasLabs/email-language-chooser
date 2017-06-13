@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="EMail Message" id="B89220315F594A37A483A479FF52D9B3" action="add">
+  <body_html>&lt;body style="font-family: Arial, Helvetica, sans-serif; font-size: small; font-weight: normal"&gt;
+  &lt;p&gt;This is a sample email for sending Part Details in English.&lt;/p&gt;
+  &lt;p&gt;You can use String.Format from the method code to send data into the email body.&lt;br/&gt;
+    Part Number: {0}&lt;br/&gt;
+    Classification: {1}&lt;br/&gt;
+    Part Description: {2}&lt;/p&gt;
+&lt;/body&gt;</body_html>
+  <body_plain></body_plain>
+  <from_user keyed_name="Innovator Admin" type="User">30B991F927274FA3829655F50C99472E</from_user>
+  <name>EmailPartDetails - English</name>
+  <subject>Test Part Details English</subject>
+ </Item>
+</AML>

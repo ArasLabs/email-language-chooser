@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="Method" id="91894EB9F05443E495672E0D1FAA1B84" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var email_lang = "English"; //default to english
+var oRadio = document.forms[0].elements["email_language"];
+for(var i = 0; i < oRadio.length; i++)
+{
+   if(oRadio[i].checked)
+   {
+      email_lang = oRadio[i].value;
+   }
+}
+ 
+var retVal=new Array();
+retVal["email_language"] = email_lang;
+window.returnValue = retVal;
+window.close();]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>getLanguageForEmail</name>
+ </Item>
+</AML>
