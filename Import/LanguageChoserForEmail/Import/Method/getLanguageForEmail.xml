@@ -13,7 +13,10 @@ for(var i = 0; i < oRadio.length; i++)
  
 var retVal=new Array();
 retVal["email_language"] = email_lang;
-window.returnValue = retVal;
+
+parent.returnValue = retVal; // Fix for SP9
+//window.returnValue = retVal; // Original version for 9.3.0 SP5 - SP8
+
 window.close();]]></method_code>
   <method_type>JavaScript</method_type>
   <name>getLanguageForEmail</name>
