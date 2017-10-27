@@ -14,7 +14,7 @@ Release | Notes
 
 Project | Aras
 --------|------
-[v1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v1) | 9.3.0 SP5 - SP8
+[v1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v1) | 9.3.0 SP5 - SP8, 11.0 SP9
 
 ## Installation
 
