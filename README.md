@@ -45,6 +45,15 @@ Project | Aras
 8. Click **Import** in the top left corner.
 9. Close the Aras Package Import tool.
 
+### Usage Steps
+
+![Demo](Screenshots/demo.gif)
+
+1. Login to Aras.
+2. Navigate to **Design > Parts** in the TOC.
+3. Right click on a Part in the grid and select **Email Details to Creator**.
+4. Choose your preferred language and click **Send Email**.
+
 ## Contributing
 
 1. Fork it!
