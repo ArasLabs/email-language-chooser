@@ -23,11 +23,13 @@ Project | Aras
 #### Important!
 **Always back up your code tree and database before applying an import package or code tree patch!**
 
-### Pre-requisites
+### Prerequisites
 
 1. Aras Innovator installed
 2. Aras Package Import tool
 3. **LanguageChooserForEmail** import package
+4. The target Aras instance must have an SMTP server configured.
+5. Users must have email addresses in the target Aras database.
 
 ### Install Steps
 
