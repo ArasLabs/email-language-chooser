@@ -8,17 +8,19 @@ This project and the following release notes have been migrated from the old Ara
 
 Release | Notes
 --------|--------
-[v1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v1) | LanguageChooserForEmail Sample Package
-[v2](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2) | Updated for Aras 11 SP9
+[v2.1.1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2.1.1) | Tested on IE, Edge Firefox 60 ESR, and Chrome
 [v2.1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2.1) | Updated documentation with usage and testing options
+[v2](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2) | Updated for Aras 11 SP9
+[v1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v1) | LanguageChooserForEmail Sample Package
 
 #### Supported Aras Versions
 
 Project | Aras
 --------|------
-[v1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v1) | 9.3.0 SP5 - SP8
-[v2](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2) | 11.0 SP9
+[v2.1.1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2.1.1) | 11.0 SP12, 15
 [v2.1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2.1) | 11.0 SP9
+[v2](https://github.com/ArasLabs/email-language-chooser/releases/tag/v2) | 11.0 SP9
+[v1](https://github.com/ArasLabs/email-language-chooser/releases/tag/v1) | 9.3.0 SP5 - SP8
 
 ## Installation
 
